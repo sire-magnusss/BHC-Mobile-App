@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "944444707796",
+    "project_id": "bhc-project-a2f70",
+    "storage_bucket": "bhc-project-a2f70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944444707796:android:d7ab02a109ad2424203c41",
+        "android_client_info": {
+          "package_name": "com.flutterflow.homeU"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9tpprjGKNZfPwcU2UH4UanxhFaMdJD1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

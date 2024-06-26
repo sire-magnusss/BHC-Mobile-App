@@ -1,0 +1,18 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "reviews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "propertyRef",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "ratingCreated",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
+}
