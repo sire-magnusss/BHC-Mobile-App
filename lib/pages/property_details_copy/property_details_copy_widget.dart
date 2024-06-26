@@ -319,20 +319,6 @@ class _PropertyDetailsCopyWidgetState extends State<PropertyDetailsCopyWidget>
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.all(16.0),
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
                                 ],
                               ),
                             ),
@@ -411,7 +397,8 @@ class _PropertyDetailsCopyWidgetState extends State<PropertyDetailsCopyWidget>
                             children: [
                               Icon(
                                 Icons.star_rounded,
-                                color: Color(0xFFCD433A),
+                                color:
+                                    FlutterFlowTheme.of(context).customColor1,
                                 size: 24.0,
                               ),
                               Padding(
@@ -1224,7 +1211,7 @@ class _PropertyDetailsCopyWidgetState extends State<PropertyDetailsCopyWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Text(
-                                'Price: P7200',
+                                'Price: P7200 P/M',
                                 style: FlutterFlowTheme.of(context)
                                     .headlineSmall
                                     .override(
@@ -1261,7 +1248,7 @@ class _PropertyDetailsCopyWidgetState extends State<PropertyDetailsCopyWidget>
                                   ),
                           elevation: 3.0,
                           borderSide: BorderSide(
-                            color: Colors.transparent,
+                            color: FlutterFlowTheme.of(context).customColor1,
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(30.0),

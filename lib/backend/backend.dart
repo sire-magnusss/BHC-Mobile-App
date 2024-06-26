@@ -23,6 +23,7 @@ import 'schema/services_record.dart';
 import 'schema/services2_record.dart';
 import 'schema/services3_record.dart';
 import 'schema/total_service_record.dart';
+import 'schema/appli11_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -49,6 +50,7 @@ export 'schema/services_record.dart';
 export 'schema/services2_record.dart';
 export 'schema/services3_record.dart';
 export 'schema/total_service_record.dart';
+export 'schema/appli11_record.dart';
 
 /// Functions to query PropertiesRecords (as a Stream and as a Future).
 Future<int> queryPropertiesRecordCount({
@@ -711,6 +713,43 @@ Future<List<TotalServiceRecord>> queryTotalServiceRecordOnce({
     queryCollectionOnce(
       TotalServiceRecord.collection,
       TotalServiceRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query Appli11Records (as a Stream and as a Future).
+Future<int> queryAppli11RecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      Appli11Record.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<Appli11Record>> queryAppli11Record({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      Appli11Record.collection,
+      Appli11Record.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<Appli11Record>> queryAppli11RecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      Appli11Record.collection,
+      Appli11Record.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,

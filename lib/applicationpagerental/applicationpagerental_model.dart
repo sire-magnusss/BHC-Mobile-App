@@ -1,10 +1,12 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'applicationpagerental_widget.dart' show ApplicationpagerentalWidget;
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -35,13 +37,12 @@ class ApplicationpagerentalModel
   TextEditingController? emailAddressTextController3;
   String? Function(BuildContext, String?)? emailAddressTextController3Validator;
   // State field(s) for emailAddress widget.
-  FocusNode? emailAddressFocusNode4;
-  TextEditingController? emailAddressTextController4;
-  String? Function(BuildContext, String?)? emailAddressTextController4Validator;
+  String? emailAddressValue;
+  FormFieldController<String>? emailAddressValueController;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode2;
-  TextEditingController? textController6;
-  String? Function(BuildContext, String?)? textController6Validator;
+  TextEditingController? textController5;
+  String? Function(BuildContext, String?)? textController5Validator;
   bool isDataUploading1 = false;
   FFUploadedFile uploadedLocalFile1 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -49,8 +50,8 @@ class ApplicationpagerentalModel
 
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode3;
-  TextEditingController? textController7;
-  String? Function(BuildContext, String?)? textController7Validator;
+  TextEditingController? textController6;
+  String? Function(BuildContext, String?)? textController6Validator;
   bool isDataUploading2 = false;
   FFUploadedFile uploadedLocalFile2 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -74,13 +75,10 @@ class ApplicationpagerentalModel
     emailAddressFocusNode3?.dispose();
     emailAddressTextController3?.dispose();
 
-    emailAddressFocusNode4?.dispose();
-    emailAddressTextController4?.dispose();
-
     textFieldFocusNode2?.dispose();
-    textController6?.dispose();
+    textController5?.dispose();
 
     textFieldFocusNode3?.dispose();
-    textController7?.dispose();
+    textController6?.dispose();
   }
 }

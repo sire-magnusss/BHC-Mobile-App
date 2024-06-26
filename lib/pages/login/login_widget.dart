@@ -94,21 +94,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            if (Theme.of(context).brightness == Brightness.dark)
-                              Image.asset(
-                                'assets/images/bhc_logoo.png',
-                                width: 138.0,
-                                height: 82.0,
-                                fit: BoxFit.fitWidth,
-                              ),
-                            if (!(Theme.of(context).brightness ==
-                                Brightness.dark))
-                              Image.asset(
-                                'assets/images/bhc_logoo.png',
-                                width: 129.0,
-                                height: 85.0,
-                                fit: BoxFit.fitWidth,
-                              ),
+                            Image.asset(
+                              'assets/images/bhc_logoo.png',
+                              width: 138.0,
+                              height: 82.0,
+                              fit: BoxFit.fitWidth,
+                            ),
                             Text(
                               'Welcome to BHC',
                               style: FlutterFlowTheme.of(context)

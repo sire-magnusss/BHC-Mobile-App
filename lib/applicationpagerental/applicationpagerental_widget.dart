@@ -1,10 +1,12 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -57,13 +59,10 @@ class _ApplicationpagerentalWidgetState
     _model.emailAddressTextController3 ??= TextEditingController();
     _model.emailAddressFocusNode3 ??= FocusNode();
 
-    _model.emailAddressTextController4 ??= TextEditingController();
-    _model.emailAddressFocusNode4 ??= FocusNode();
-
-    _model.textController6 ??= TextEditingController();
+    _model.textController5 ??= TextEditingController();
     _model.textFieldFocusNode2 ??= FocusNode();
 
-    _model.textController7 ??= TextEditingController();
+    _model.textController6 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
   }
 
@@ -101,7 +100,7 @@ class _ApplicationpagerentalWidgetState
             ),
           ),
           title: Text(
-            'Application for Rental',
+            'Application for Rental/Purchasing',
             style: FlutterFlowTheme.of(context).titleSmall.override(
                   fontFamily: 'Urbanist',
                   letterSpacing: 0.0,
@@ -354,67 +353,66 @@ class _ApplicationpagerentalWidgetState
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
-                child: TextFormField(
-                  controller: _model.emailAddressTextController4,
-                  focusNode: _model.emailAddressFocusNode4,
-                  obscureText: false,
-                  decoration: InputDecoration(
-                    labelText: 'Application Type',
-                    labelStyle:
-                        FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Urbanist',
-                              letterSpacing: 0.0,
+                child: StreamBuilder<List<Appli11Record>>(
+                  stream: queryAppli11Record(),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 50.0,
+                          height: 50.0,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              FlutterFlowTheme.of(context).primary,
                             ),
-                    hintText: 'Application Type',
-                    hintStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Urbanist',
-                          letterSpacing: 0.0,
+                          ),
                         ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).lineGray,
-                        width: 2.0,
+                      );
+                    }
+                    List<Appli11Record> emailAddressAppli11RecordList =
+                        snapshot.data!;
+                    return FlutterFlowDropDown<String>(
+                      controller: _model.emailAddressValueController ??=
+                          FormFieldController<String>(null),
+                      options: emailAddressAppli11RecordList
+                          .map((e) => e.type)
+                          .toList(),
+                      onChanged: (val) =>
+                          setState(() => _model.emailAddressValue = val),
+                      width: 994.0,
+                      height: 56.0,
+                      textStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.override(
+                                fontFamily: 'Urbanist',
+                                letterSpacing: 0.0,
+                              ),
+                      hintText: 'Application Type',
+                      icon: Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        color: FlutterFlowTheme.of(context).secondaryText,
+                        size: 24.0,
                       ),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0x00000000),
-                        width: 2.0,
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    errorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0x00000000),
-                        width: 2.0,
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    focusedErrorBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0x00000000),
-                        width: 2.0,
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    filled: true,
-                    fillColor: FlutterFlowTheme.of(context).secondaryBackground,
-                    contentPadding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 0.0, 24.0),
-                  ),
-                  style: FlutterFlowTheme.of(context).titleSmall.override(
-                        fontFamily: 'Urbanist',
-                        letterSpacing: 0.0,
-                      ),
-                  validator: _model.emailAddressTextController4Validator
-                      .asValidator(context),
+                      fillColor:
+                          FlutterFlowTheme.of(context).secondaryBackground,
+                      elevation: 2.0,
+                      borderColor: FlutterFlowTheme.of(context).alternate,
+                      borderWidth: 2.0,
+                      borderRadius: 8.0,
+                      margin:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                      hidesUnderline: true,
+                      isOverButton: true,
+                      isSearchable: false,
+                      isMultiSelect: false,
+                    );
+                  },
                 ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: TextFormField(
-                  controller: _model.textController6,
+                  controller: _model.textController5,
                   focusNode: _model.textFieldFocusNode2,
                   autofocus: true,
                   obscureText: false,
@@ -466,7 +464,7 @@ class _ApplicationpagerentalWidgetState
                         letterSpacing: 0.0,
                       ),
                   validator:
-                      _model.textController6Validator.asValidator(context),
+                      _model.textController5Validator.asValidator(context),
                 ),
               ),
               FlutterFlowIconButton(
@@ -543,7 +541,7 @@ class _ApplicationpagerentalWidgetState
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: TextFormField(
-                  controller: _model.textController7,
+                  controller: _model.textController6,
                   focusNode: _model.textFieldFocusNode3,
                   autofocus: true,
                   obscureText: false,
@@ -595,7 +593,7 @@ class _ApplicationpagerentalWidgetState
                         letterSpacing: 0.0,
                       ),
                   validator:
-                      _model.textController7Validator.asValidator(context),
+                      _model.textController6Validator.asValidator(context),
                 ),
               ),
               Text(
@@ -687,7 +685,7 @@ class _ApplicationpagerentalWidgetState
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 19.0, 4.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 4.0, 0.0),
                 child: FFButtonWidget(
                   onPressed: () async {
                     await ApplicationsRecord.collection
@@ -699,8 +697,7 @@ class _ApplicationpagerentalWidgetState
                           employerContacts:
                               _model.emailAddressTextController2.text,
                           jobTitle: _model.emailAddressTextController3.text,
-                          applicationType:
-                              _model.emailAddressTextController4.text,
+                          applicationType: _model.emailAddressValue,
                         ));
 
                     context.pushNamed('payment');

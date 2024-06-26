@@ -5,25 +5,25 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'application_model.dart';
-export 'application_model.dart';
+import 't_p_sfirstscreen_model.dart';
+export 't_p_sfirstscreen_model.dart';
 
-class ApplicationWidget extends StatefulWidget {
-  const ApplicationWidget({super.key});
+class TPSfirstscreenWidget extends StatefulWidget {
+  const TPSfirstscreenWidget({super.key});
 
   @override
-  State<ApplicationWidget> createState() => _ApplicationWidgetState();
+  State<TPSfirstscreenWidget> createState() => _TPSfirstscreenWidgetState();
 }
 
-class _ApplicationWidgetState extends State<ApplicationWidget> {
-  late ApplicationModel _model;
+class _TPSfirstscreenWidgetState extends State<TPSfirstscreenWidget> {
+  late TPSfirstscreenModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ApplicationModel());
+    _model = createModel(context, () => TPSfirstscreenModel());
   }
 
   @override
@@ -60,7 +60,7 @@ class _ApplicationWidgetState extends State<ApplicationWidget> {
             ),
           ),
           title: Text(
-            'Applications',
+            'TPS Statements',
             style: FlutterFlowTheme.of(context).titleSmall.override(
                   fontFamily: 'Urbanist',
                   letterSpacing: 0.0,
@@ -118,7 +118,7 @@ class _ApplicationWidgetState extends State<ApplicationWidget> {
                                 fit: BoxFit.fitWidth,
                               ),
                               Text(
-                                'Applications',
+                                'TPS Statements',
                                 style: FlutterFlowTheme.of(context)
                                     .displaySmall
                                     .override(
@@ -145,7 +145,7 @@ class _ApplicationWidgetState extends State<ApplicationWidget> {
                                     children: [
                                       TextSpan(
                                         text:
-                                            'Apply for a House by clicking the Button Below',
+                                            'Select what you would like to view abouut your TPS statements',
                                         style: TextStyle(),
                                       )
                                     ],
@@ -179,9 +179,9 @@ class _ApplicationWidgetState extends State<ApplicationWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 25.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('applicationpagerental');
+                      context.pushNamed('RenatlandTPSSpage');
                     },
-                    text: 'Apply For House',
+                    text: 'Rental and TPS statements',
                     options: FFButtonOptions(
                       width: 336.0,
                       height: 50.0,
@@ -208,15 +208,43 @@ class _ApplicationWidgetState extends State<ApplicationWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                  child: Text(
-                    'Before proceeding to the next page!\n\nKindly make sure you have:\nScreenshots or Image versions of your: \nOmang and Bank Statement/Proof of Income\nThank You.\n\n',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Urbanist',
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          fontSize: 15.0,
-                          letterSpacing: 0.0,
-                        ),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 25.0, 0.0),
+                  child: FFButtonWidget(
+                    onPressed: () async {
+                      context.pushNamed(
+                        'TPSBalanceOnlyy',
+                        extra: <String, dynamic>{
+                          kTransitionInfoKey: TransitionInfo(
+                            hasTransition: true,
+                            transitionType: PageTransitionType.rightToLeft,
+                          ),
+                        },
+                      );
+                    },
+                    text: 'View balance only',
+                    options: FFButtonOptions(
+                      width: 336.0,
+                      height: 50.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: Color(0xFFCD433A),
+                      textStyle:
+                          FlutterFlowTheme.of(context).titleMedium.override(
+                                fontFamily: 'Lexend Deca',
+                                color: Colors.white,
+                                fontSize: 18.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                      elevation: 3.0,
+                      borderSide: BorderSide(
+                        color: Colors.transparent,
+                        width: 1.0,
+                      ),
+                      borderRadius: BorderRadius.circular(40.0),
+                    ),
                   ),
                 ),
               ],

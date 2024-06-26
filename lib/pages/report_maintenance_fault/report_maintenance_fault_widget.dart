@@ -449,7 +449,7 @@ class _ReportMaintenanceFaultWidgetState
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(12.0),
                                   child: Image.network(
-                                    'https://picsum.photos/seed/867/600',
+                                    'https://cdn4.premiumread.com/?url=https://www.mmegi.bw/uploads/imported_images/2017/september/26/phpwKvXeL.jpg&w=400&q=72&f=jpg',
                                     width: double.infinity,
                                     height: 200.0,
                                     fit: BoxFit.cover,
@@ -552,7 +552,7 @@ class _ReportMaintenanceFaultWidgetState
                                                 .showSnackBar(
                                               SnackBar(
                                                 content: Text(
-                                                  'Maintenance Rquest Sent Succesfully',
+                                                  'Your case has been logged with BHC. Your reference number is 4799. You will be assisted within 3 days.',
                                                   style: TextStyle(
                                                     color: FlutterFlowTheme.of(
                                                             context)
