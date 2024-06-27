@@ -353,7 +353,7 @@ class _RenatlandTPSSpageWidgetState extends State<RenatlandTPSSpageWidget> {
                                           CrossAxisAlignment.end,
                                       children: [
                                         Text(
-                                          '\$50.00',
+                                          'P4500.00',
                                           textAlign: TextAlign.end,
                                           style: FlutterFlowTheme.of(context)
                                               .titleLarge
@@ -493,7 +493,7 @@ class _RenatlandTPSSpageWidgetState extends State<RenatlandTPSSpageWidget> {
                                           CrossAxisAlignment.end,
                                       children: [
                                         Text(
-                                          '\$50.00',
+                                          'P4500.00',
                                           textAlign: TextAlign.end,
                                           style: FlutterFlowTheme.of(context)
                                               .titleLarge
@@ -634,7 +634,7 @@ class _RenatlandTPSSpageWidgetState extends State<RenatlandTPSSpageWidget> {
                                           CrossAxisAlignment.end,
                                       children: [
                                         Text(
-                                          '\$50.00',
+                                          'P4500.00',
                                           textAlign: TextAlign.end,
                                           style: FlutterFlowTheme.of(context)
                                               .titleLarge

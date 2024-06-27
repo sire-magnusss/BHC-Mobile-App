@@ -138,14 +138,14 @@ class _TPSfirstscreenWidgetState extends State<TPSfirstscreenWidget> {
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
-                                    30.0, 0.0, 20.0, 0.0),
+                                    10.0, 0.0, 30.0, 0.0),
                                 child: RichText(
                                   textScaler: MediaQuery.of(context).textScaler,
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
                                         text:
-                                            'Select what you would like to view abouut your TPS statements',
+                                            'Select what you would like to view about your TPS ',
                                         style: TextStyle(),
                                       )
                                     ],

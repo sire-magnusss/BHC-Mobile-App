@@ -113,6 +113,34 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        appBar: AppBar(
+          backgroundColor: Color(0xFFCD433A),
+          automaticallyImplyLeading: false,
+          leading: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pop();
+            },
+            child: Icon(
+              Icons.arrow_back_rounded,
+              color: FlutterFlowTheme.of(context).primaryText,
+              size: 24.0,
+            ),
+          ),
+          title: Text(
+            'Admin Dashboard',
+            style: FlutterFlowTheme.of(context).titleSmall.override(
+                  fontFamily: 'Urbanist',
+                  letterSpacing: 0.0,
+                ),
+          ),
+          actions: [],
+          centerTitle: true,
+          elevation: 0.0,
+        ),
         body: Row(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -321,7 +349,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                       4.0,
                                                                       0.0),
                                                           child: Text(
-                                                            '\$567,402',
+                                                            'P567,402.00',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
                                                                 .displaySmall
@@ -478,7 +506,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Total Orders',
+                                                    'Total Rental Applications',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -568,7 +596,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Total Orders',
+                                                    'Total Sales Applications',
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .labelMedium
@@ -707,7 +735,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                   4.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '\$529,204',
+                                                        'P529,204.00',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -834,7 +862,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                   4.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '\$529,204',
+                                                        'P529,204.00',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1406,7 +1434,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -1664,7 +1692,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -1922,7 +1950,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -2180,7 +2208,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -2438,7 +2466,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -2690,7 +2718,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -2942,7 +2970,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                           Expanded(
                                                             flex: 2,
                                                             child: Text(
-                                                              '\$2,100',
+                                                              'P2,100.00',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleLarge
@@ -3080,90 +3108,6 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.max,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 12.0, 0.0),
-                                                child: Text(
-                                                  'Card Header',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .headlineMedium
-                                                      .override(
-                                                        fontFamily: 'Urbanist',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 4.0, 12.0, 0.0),
-                                                child: Text(
-                                                  'Create tables and ui elements that work below.',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .labelMedium
-                                                      .override(
-                                                        fontFamily: 'Poppins',
-                                                        letterSpacing: 0.0,
-                                                      ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        FFButtonWidget(
-                                          onPressed: () {
-                                            print('Button pressed ...');
-                                          },
-                                          text: 'Add New',
-                                          icon: Icon(
-                                            Icons.add_rounded,
-                                            color: FlutterFlowTheme.of(context)
-                                                .info,
-                                            size: 15.0,
-                                          ),
-                                          options: FFButtonOptions(
-                                            height: 40.0,
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 0.0, 16.0, 0.0),
-                                            iconPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 0.0, 0.0),
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .titleSmall
-                                                    .override(
-                                                      fontFamily: 'Urbanist',
-                                                      fontSize: 14.0,
-                                                      letterSpacing: 0.0,
-                                                    ),
-                                            elevation: 2.0,
-                                            borderSide: BorderSide(
-                                              color: Colors.transparent,
-                                              width: 1.0,
-                                            ),
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 16.0, 0.0, 0.0),
@@ -3402,7 +3346,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'Pilot',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall
@@ -3638,7 +3582,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Randy Peterson',
+                                                                    'Diane Mac\'Gee',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -3659,7 +3603,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'Micro-Biologist',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall
@@ -3895,7 +3839,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Randy Peterson',
+                                                                    'Tom Pauland',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -3916,7 +3860,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'Police Officer',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall
@@ -4152,7 +4096,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Randy Peterson',
+                                                                    'Edward Elric',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -4173,7 +4117,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'CEO',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall
@@ -4409,7 +4353,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Randy Peterson',
+                                                                    'Alphonse Elric',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -4430,7 +4374,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'Nurse',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall
@@ -4661,7 +4605,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Randy Peterson',
+                                                                    'Winry Rockbell',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -4682,7 +4626,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'House Helper',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall
@@ -4913,7 +4857,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                         .start,
                                                                 children: [
                                                                   Text(
-                                                                    'Randy Peterson',
+                                                                    'Colonel Mustang',
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
                                                                         .bodyMedium
@@ -4934,7 +4878,7 @@ class _AccountsdashWidgetState extends State<AccountsdashWidget>
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Business Name',
+                                                                      'Veterinarian',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodySmall

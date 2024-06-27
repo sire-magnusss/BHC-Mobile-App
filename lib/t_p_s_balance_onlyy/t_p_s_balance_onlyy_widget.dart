@@ -102,7 +102,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                         child: Text(
-                          'P2,201.00',
+                          'P13,500.00',
                           style: FlutterFlowTheme.of(context)
                               .displayLarge
                               .override(
@@ -172,7 +172,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                       ],
                                     ),
                                     Text(
-                                      'P2,201.00',
+                                      'P13,500.00',
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
@@ -306,7 +306,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'P1.851.00',
+                                      'P13,150.00',
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
