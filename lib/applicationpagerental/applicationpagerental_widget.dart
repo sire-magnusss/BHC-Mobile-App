@@ -100,7 +100,7 @@ class _ApplicationpagerentalWidgetState
             ),
           ),
           title: Text(
-            'Application for Rental/Purchasing',
+            'Application for Rental',
             style: FlutterFlowTheme.of(context).titleSmall.override(
                   fontFamily: 'Urbanist',
                   letterSpacing: 0.0,

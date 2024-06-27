@@ -74,21 +74,18 @@ class AppStateNotifier extends ChangeNotifier {
   }
 }
 
-GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
-    GoRouter(
+GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => appStateNotifier.loggedIn
-          ? entryPage ?? NavBarPage()
-          : SignupscreenWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? NavBarPage() : SignupscreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.loggedIn
-              ? entryPage ?? NavBarPage()
-              : SignupscreenWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? NavBarPage() : SignupscreenWidget(),
         ),
         FFRoute(
           name: 'login',
@@ -282,10 +279,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
         FFRoute(
           name: 'myPropertiesCopy',
           path: '/myPropertiesCopy',
-          builder: (context, params) => NavBarPage(
-            initialPage: '',
-            page: MyPropertiesCopyWidget(),
-          ),
+          builder: (context, params) => MyPropertiesCopyWidget(),
         ),
         FFRoute(
           name: 'TicketHistory',
@@ -345,26 +339,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: 'List04Notifications',
           path: '/list04Notifications',
           builder: (context, params) => List04NotificationsWidget(),
-        ),
-        FFRoute(
-          name: 'accountsdash',
-          path: '/accountsdash',
-          builder: (context, params) => AccountsdashWidget(),
-        ),
-        FFRoute(
-          name: 'TPSBalanceOnlyy',
-          path: '/tPSBalanceOnlyy',
-          builder: (context, params) => TPSBalanceOnlyyWidget(),
-        ),
-        FFRoute(
-          name: 'TPSfirstscreen',
-          path: '/tPSfirstscreen',
-          builder: (context, params) => TPSfirstscreenWidget(),
-        ),
-        FFRoute(
-          name: 'RenatlandTPSSpage',
-          path: '/renatlandTPSSpage',
-          builder: (context, params) => RenatlandTPSSpageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

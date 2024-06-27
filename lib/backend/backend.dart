@@ -24,7 +24,6 @@ import 'schema/services2_record.dart';
 import 'schema/services3_record.dart';
 import 'schema/total_service_record.dart';
 import 'schema/appli11_record.dart';
-import 'schema/tps_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart' hide Order;
@@ -52,7 +51,6 @@ export 'schema/services2_record.dart';
 export 'schema/services3_record.dart';
 export 'schema/total_service_record.dart';
 export 'schema/appli11_record.dart';
-export 'schema/tps_record.dart';
 
 /// Functions to query PropertiesRecords (as a Stream and as a Future).
 Future<int> queryPropertiesRecordCount({
@@ -752,43 +750,6 @@ Future<List<Appli11Record>> queryAppli11RecordOnce({
     queryCollectionOnce(
       Appli11Record.collection,
       Appli11Record.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-/// Functions to query TpsRecords (as a Stream and as a Future).
-Future<int> queryTpsRecordCount({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-}) =>
-    queryCollectionCount(
-      TpsRecord.collection,
-      queryBuilder: queryBuilder,
-      limit: limit,
-    );
-
-Stream<List<TpsRecord>> queryTpsRecord({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollection(
-      TpsRecord.collection,
-      TpsRecord.fromSnapshot,
-      queryBuilder: queryBuilder,
-      limit: limit,
-      singleRecord: singleRecord,
-    );
-
-Future<List<TpsRecord>> queryTpsRecordOnce({
-  Query Function(Query)? queryBuilder,
-  int limit = -1,
-  bool singleRecord = false,
-}) =>
-    queryCollectionOnce(
-      TpsRecord.collection,
-      TpsRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
