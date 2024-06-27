@@ -31,6 +31,7 @@ dependencies:
   cloud_firestore_platform_interface: 6.2.3
   cloud_firestore_web: 3.12.3
   collection: 1.18.0
+  data_table_2: 2.5.10
   dropdown_button2: 2.3.9
   file_picker: 8.0.3
   firebase_auth: 4.19.5

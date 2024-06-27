@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -94,23 +95,40 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                           style:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     fontFamily: 'Poppins',
+                                    fontSize: 18.0,
                                     letterSpacing: 0.0,
                                   ),
                         ),
                       ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
-                        child: Text(
-                          'P13,500.00',
-                          style: FlutterFlowTheme.of(context)
-                              .displayLarge
-                              .override(
-                                fontFamily: 'Poppins',
-                                letterSpacing: 0.0,
-                              ),
+                      FlutterFlowIconButton(
+                        borderColor: FlutterFlowTheme.of(context).customColor1,
+                        borderRadius: 20.0,
+                        borderWidth: 1.0,
+                        buttonSize: 40.0,
+                        icon: Icon(
+                          Icons.remove_red_eye,
+                          color: FlutterFlowTheme.of(context).primaryText,
+                          size: 24.0,
                         ),
+                        onPressed: () async {
+                          _model.balancevisible = false;
+                          setState(() {});
+                        },
                       ),
+                      if (_model.balancevisible == false)
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 16.0, 0.0, 0.0),
+                          child: Text(
+                            'P1,232,00.00',
+                            style: FlutterFlowTheme.of(context)
+                                .displayLarge
+                                .override(
+                                  fontFamily: 'Poppins',
+                                  letterSpacing: 0.0,
+                                ),
+                          ),
+                        ),
                       Divider(
                         height: 32.0,
                         thickness: 1.0,
@@ -147,7 +165,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'Primary Card',
+                                          'Total Payment Made:',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
                                               .override(
@@ -172,7 +190,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                       ],
                                     ),
                                     Text(
-                                      'P13,500.00',
+                                      'P168,000.00',
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
@@ -245,7 +263,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                         height: 44.0,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
-                                              .accent2,
+                                              .customColor2,
                                           borderRadius:
                                               BorderRadius.circular(12.0),
                                           border: Border.all(
@@ -279,7 +297,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'House Total Rent',
+                                            'Monthly Rent',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
@@ -306,7 +324,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'P13,150.00',
+                                      'P7,000.00',
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
@@ -358,7 +376,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                         height: 44.0,
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
-                                              .accent2,
+                                              .customColor2,
                                           borderRadius:
                                               BorderRadius.circular(12.0),
                                           border: Border.all(
@@ -392,7 +410,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'Application Fee',
+                                            'Monthly Rent',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
@@ -405,7 +423,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 8.0, 0.0, 0.0),
                                             child: Text(
-                                              'Today, 4:32pm',
+                                              '1 Month Ago, 4:20pm',
                                               style:
                                                   FlutterFlowTheme.of(context)
                                                       .labelMedium
@@ -419,7 +437,7 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                                       ),
                                     ),
                                     Text(
-                                      'P350.00',
+                                      'P7,000.00',
                                       textAlign: TextAlign.end,
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
@@ -434,6 +452,155 @@ class _TPSBalanceOnlyyWidgetState extends State<TPSBalanceOnlyyWidget> {
                             ),
                           ),
                         ].divide(SizedBox(height: 8.0)),
+                      ),
+                      ListView(
+                        padding: EdgeInsets.fromLTRB(
+                          0,
+                          12.0,
+                          0,
+                          44.0,
+                        ),
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
+                        children: [
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
+                            child: Container(
+                              width: 100.0,
+                              height: 64.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 8.0, 0.0, 8.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 12.0, 0.0),
+                                      child: Container(
+                                        width: 44.0,
+                                        height: 44.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .customColor2,
+                                          borderRadius:
+                                              BorderRadius.circular(12.0),
+                                          border: Border.all(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondary,
+                                            width: 2.0,
+                                          ),
+                                        ),
+                                        child: Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding: EdgeInsets.all(4.0),
+                                            child: FaIcon(
+                                              FontAwesomeIcons.google,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              size: 24.0,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Monthly Rent',
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyLarge
+                                                .override(
+                                                  fontFamily: 'Poppins',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 8.0, 0.0, 0.0),
+                                            child: Text(
+                                              '2 Month Ago, 7:20AM',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMedium
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Text(
+                                      'P7,000.00',
+                                      textAlign: TextAlign.end,
+                                      style: FlutterFlowTheme.of(context)
+                                          .titleLarge
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            letterSpacing: 0.0,
+                                          ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ].divide(SizedBox(height: 8.0)),
+                      ),
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onLongPress: () async {
+                          context.pushNamed('RenatlandTPSSpage');
+                        },
+                        child: FFButtonWidget(
+                          onPressed: () {
+                            print('Button pressed ...');
+                          },
+                          text: 'View Statement (Hold)',
+                          options: FFButtonOptions(
+                            height: 40.0,
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                24.0, 0.0, 24.0, 0.0),
+                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            color: FlutterFlowTheme.of(context).customColor1,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .titleSmall
+                                .override(
+                                  fontFamily: 'Urbanist',
+                                  color: Colors.white,
+                                  letterSpacing: 0.0,
+                                ),
+                            elevation: 3.0,
+                            borderSide: BorderSide(
+                              color: FlutterFlowTheme.of(context).customColor2,
+                              width: 3.0,
+                            ),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
                       ),
                     ].addToEnd(SizedBox(height: 44.0)),
                   ),
