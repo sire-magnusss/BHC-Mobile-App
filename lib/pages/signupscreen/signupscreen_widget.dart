@@ -95,21 +95,12 @@ class _SignupscreenWidgetState extends State<SignupscreenWidget> {
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            if (!(Theme.of(context).brightness ==
-                                Brightness.dark))
-                              Image.asset(
-                                'assets/images/bhc_logoo.png',
-                                width: 96.0,
-                                height: 74.0,
-                                fit: BoxFit.fitWidth,
-                              ),
-                            if (Theme.of(context).brightness == Brightness.dark)
-                              Image.asset(
-                                'assets/images/logoUpHome@3x.png',
-                                width: 200.0,
-                                height: 60.0,
-                                fit: BoxFit.fitWidth,
-                              ),
+                            Image.asset(
+                              'assets/images/bhc_logoo.png',
+                              width: 96.0,
+                              height: 74.0,
+                              fit: BoxFit.fitWidth,
+                            ),
                           ],
                         ),
                       ),
