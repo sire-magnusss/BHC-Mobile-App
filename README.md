@@ -50,7 +50,7 @@ Update the app’s configuration files with your Firebase project credentials.
 
 Run the application:
 
-Use FlutterFlow or your IDE to run the app on an emulator or physical device.
+Use FlutterFlow or your IDE to run the app on an emulator or physical device (Android or IOS).
 
 # Usage
 
@@ -60,10 +60,50 @@ Apply for Housing: Use the app to apply directly for housing, with step-by-step 
 
 Stay Informed: Receive notifications about new housing options and updates on your application.
 
+# Application UI
 
-Contributing
+# Login Screen
+![image](https://github.com/user-attachments/assets/5c12080e-03d3-4beb-bdaa-4941bf2ad15d)
+
+# Home Page
+![image](https://github.com/user-attachments/assets/35b443e0-62d3-479c-8c6f-1ddabc5fc99a)
+
+# Property Listings Page
+![image](https://github.com/user-attachments/assets/b9637d50-cb9b-4ac5-99c3-4e7404147c69)
+
+# TPS Statements Page
+![image](https://github.com/user-attachments/assets/19ad9dac-9a3f-40b6-867d-8b7c224896d9)
+
+# Rental and Balance Page
+![image](https://github.com/user-attachments/assets/3ac44ee7-3ff4-4ba1-9675-e344324fbeb9)
+
+# Rental and TPS Statements
+![image](https://github.com/user-attachments/assets/c173aa8b-5421-404f-9576-979d29ff05d9)
+
+# Payment Screen
+
+![image](https://github.com/user-attachments/assets/412f3472-2976-48c4-8f8c-d264a03f095a)
+
+# Application Screen
+
+![image](https://github.com/user-attachments/assets/a499efdb-27a5-4d2a-81ee-648fa4b9761a)
+
+# Maintenance Faults Screen
+![image](https://github.com/user-attachments/assets/9a1a8386-2022-4f6a-9bfc-e40009023d22)
+
+
+
+
+
+
+
+
+
+
+
+# Contributing
 
 Contributions are welcome! Feel free to fork this repository, make your changes, and submit a pull request.
 
-License
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
