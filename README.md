@@ -38,7 +38,7 @@ bash
 
 Copy code
 
-git clone https://github.com/yourusername/bhc-mobile-application.git
+git clone https://github.com/sire-magnusss/bhc-mobile-application.git
 
 Open the project in FlutterFlow (if applicable) or a Flutter-compatible IDE.
 
