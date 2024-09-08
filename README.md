@@ -4,7 +4,7 @@
 
 # Overview
 
-Developed and tested by:  Bakang Othovero Raditedu []- @---- , Magnus Makgasane- @sire_magnusss ,  Seipone Talama Sebina - @--- , Olaotse Ntshonono- @Olaotse07 .
+Developed and tested by:  Bakang Othovero Raditedu [@...](https://github.com/...). , Magnus Makgasane- [@sire_magnusss](https://github.com/sire-magnusss). ,  Seipone Talama Sebina - [@bida22-078@thuto.bac.ac.bw](https://github.com/@bida22-078@thuto.bac.ac.bw) , Olaotse Ntshonono- [@Olaotse07](https://github.com/Olaotse07) .
 
 The BHC (Botswana Housing Corporation) Mobile Application was developed as part of a hackathon, designed to improve access to housing information and services for BHC clients. 
 
