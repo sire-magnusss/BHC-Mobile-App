@@ -4,6 +4,8 @@
 
 # Overview
 
+Developed and tested by:  Bakang Othovero Raditedu []- @---- , Magnus Makgasane- @sire_magnusss ,  Seipone Talama Sebina Sekwenyane- @--- , Olaotse Ntshonono- @Olaotse07 .
+
 The BHC (Botswana Housing Corporation) Mobile Application was developed as part of a hackathon, designed to improve access to housing information and services for BHC clients. 
 
 The app provides users with easy access to housing options, application processes, and customer service. Built using FlutterFlow, the app is designed to be intuitive and user-friendly, offering a seamless experience for BHC clients.
